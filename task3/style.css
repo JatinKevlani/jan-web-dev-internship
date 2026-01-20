@@ -1,0 +1,84 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex; 
+    /* Enables flexbox for horizontal alignment */
+
+    justify-content: space-between; 
+    /* Pushes logo to left and links to right */
+
+    align-items: center; 
+    /* Vertically centers items */
+
+    padding: 15px 30px;
+    background-color: #222;
+    color: white;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex; 
+    /* Aligns nav items in a row */
+
+    gap: 20px; 
+    /* Space between nav items */
+
+    list-style: none;
+}
+
+/* ================= CARD SECTION ================= */
+.card-container {
+    display: flex;
+    /* Enables flexible layout for cards */
+
+    justify-content: center;
+    /* Centers cards horizontally */
+
+    align-items: stretch;
+    /* Makes cards equal height */
+
+    flex-wrap: wrap;
+    /* Allows cards to move to next line on smaller screens */
+
+    gap: 20px;
+    /* Space between cards */
+
+    padding: 30px;
+}
+
+.card {
+    background-color: #f4f4f4;
+    width: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+
+    /* Adds subtle shadow */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ================= MOBILE RESPONSIVENESS ================= */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        /* Stacks logo and nav links vertically */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        /* Stacks nav items */
+        align-items: center;
+        margin-top: 10px;
+    }
+}
